@@ -17,6 +17,8 @@ const playlistSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: "User"
     }
+},{
+    timestamps: true
 })
 
 export const Playlist = mongooes.model("Playlist", playlistSchema)

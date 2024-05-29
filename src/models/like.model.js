@@ -18,6 +18,8 @@ const likeSchema = new Schema({
         ref: "Tweet"
     }
     
+},{
+    timestamps: true
 })
 
 export const Like = mongoose.model("Like", likeSchema)
