@@ -319,8 +319,8 @@ const updateUserCoverImage = asyncHandler(async(req, res) =>{
 
 const gatUserChannelProfile = asyncHandler(async(req, res) =>{
     const {username} = req.params
-
-    if (!username?.trime()) {
+   console.log(username);
+    if (!username?.trim()) {
         throw new ApiError(400, "username is missing")
     }
 
@@ -376,6 +376,7 @@ const gatUserChannelProfile = asyncHandler(async(req, res) =>{
             }
         }
     ])
+    console.log(channel);
 
     if (!channel?.length) {
         throw new ApiError(404, "channel does not exists")
